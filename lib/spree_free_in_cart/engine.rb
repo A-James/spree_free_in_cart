@@ -1,5 +1,6 @@
 module SpreeFreeInCart
   class Engine < Rails::Engine
+    require 'rounding'
     require 'spree/core'
     isolate_namespace Spree
     engine_name 'spree_free_in_cart'
