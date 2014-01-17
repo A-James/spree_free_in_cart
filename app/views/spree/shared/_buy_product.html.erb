@@ -3,11 +3,11 @@
 
       <div data-hook="header_product_price">
         <div class="add-to-cart">
-          <%= hidden_field_tag (@featured_product.variants_and_option_values.any? ? :quantity : "variants[#{@featured_product.master.id}]"),
+          <%#= hidden_field_tag (@featured_product.variants_and_option_values.any? ? :quantity : "variants[#{@featured_product.master.id}]"),
             1, :class => 'title', :min => 1 %>
-          <%= button_tag :class => 'btn btn-primary btn-lg', :id => 'add-to-cart-button', :type => :submit do %>
-            <%= Spree.t(:buy_now) %>
-          <% end %>
+          <%#= button_tag :class => 'btn btn-primary btn-lg', :id => 'add-to-cart-button', :type => :submit do %>
+            <%#= Spree.t(:buy_now) %>
+          <%# end %>
         </div>
       </div>
    
