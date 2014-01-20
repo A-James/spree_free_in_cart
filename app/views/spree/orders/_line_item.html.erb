@@ -16,18 +16,21 @@
           <%= Spree.t(:out_of_stock) %>&nbsp;&nbsp;<br />
         </span>
       <% end %>
-      <span class="line-item-description" data-hook="line_item_description">
+      <span class="line-item-description hidden-xs" data-hook="line_item_description">
         <%= line_item_description_text(line_item.description) %>
       </span>
     </td>
     <td class="lead text-primary cart-item-price" data-hook="cart_item_price">
-      <%= line_item.price.to_f > 0 ? line_item.single_money.to_html : "<span class='pop'>FREE</span>".html_safe %>
+      <%= line_item.price.to_f > 0 ? line_item.single_money.to_html : "<span class='pop'>".html_safe + Spree.t(:free) +"</span>".html_safe %>
     </td>
     <td class="cart-item-quantity" data-hook="cart_item_quantity">
       <% if line_item.variant.sku == Spree::Config[:free_item_sku] %>
         <%= line_item.quantity %>
       <% else %>
-        <%= item_form.number_field :quantity, :min => 0, :class => "line_item_quantity", :size => 5 %>
+        <%= item_form.number_field :quantity, :min => 0, :class => "form-control line_item_quantity", :size => 5 %>
+          <% if line_item.quantity == 1 %>
+            <div class="alert alert-info hidden-xs"><a href="#" id="add-one-more" class="btn btn-primary btn-small"><%= Spree.t(:buy_one_more) %></a> <%= Spree.t(:get_one_free) %></div>
+          <% end %>
       <% end %>
     </td>
     <td class="lead text-primary cart-item-total" data-hook="cart_item_total">

@@ -2,4 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  spree:
+    buy_one_more: "Add one more"
+    get_one_free: "and get one FREE!"
+    free: "FREE!"
