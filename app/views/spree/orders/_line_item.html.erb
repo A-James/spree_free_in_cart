@@ -41,3 +41,10 @@
     </td>
   </tr>
 <% end -%>
+<script type="text/javascript">
+  $('#add-one-more').on('click', function(){
+    $('#order_line_items_attributes_0_quantity').val(2);
+    $('#update-button').trigger('click');
+    return false;
+  });
+</script>
