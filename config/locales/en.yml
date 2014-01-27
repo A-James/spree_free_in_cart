@@ -5,3 +5,18 @@ en:
     free: "FREE!"
     just: "Just"
     each: "each"
+
+    100_secure: "100% Secure"
+    256_bit_encrypted: "256 bit SSL encrypted."
+    card_details_safe: "Your card details are safe."
+
+    fast_safe_shipping: "Fast, Safe shipping"
+    free_worldwide_delivery: "FREE worldwide delivery!"
+    packaged_with_care: "Packaged with exceptional care"
+    free_shipping_upgrade: "Ordering within [x]? We'll upgrade you to express delivery for FREE"
+
+    limited_offer: "Limited offer"
+    buy_two: "Buy 2,"
+    one_free: "get one free!"
+    expires_on: "Expires on"
+    just_days_left: "Just [x] days left!"
