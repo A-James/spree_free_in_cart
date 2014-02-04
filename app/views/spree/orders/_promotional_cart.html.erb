@@ -8,7 +8,7 @@
 
           <div id="subtotal" data-hook class="well col-md-12 text-right">
             <%= Spree.t(:subtotal) %>: <span class="lead text-primary order-total"><%= @order.display_total.to_html %> 
-            <% if current_order.item_count != 1 %>(<%= Spree.t(:just) %> <%= (@order.total / @current_order.line_items.sum(&:quantity)).round(2) %> <%= Spree.t(:each) %>!)<% end %></span>
+            <% if current_order.item_count != 1 %>(<%= Spree.t(:just) %> <%= @order.display_cart_average.to_html %> <%= Spree.t(:each) %>!)<% end %></span>
           </div>
 
           <div class="links col-md-6 navbar-form pull-right text-right" data-hook="cart_buttons">

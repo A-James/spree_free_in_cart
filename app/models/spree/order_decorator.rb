@@ -27,5 +27,10 @@ Spree::Order.class_eval do
         end
       end
     end
-  end  
+  end 
+
+  def display_cart_average
+    Spree::Money.new(total/line_items.sum(&:quantity), { currency: currency })
+  end
+
 end
